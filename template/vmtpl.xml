@@ -5,7 +5,7 @@
   <currentMemory unit='KiB'>{{mem .Memory}}</currentMemory>
   <vcpu placement='static'>{{.Cpu}}</vcpu>
   <os>
-    <type arch='x86_64' machine='pc-q35-4.2'>hvm</type>
+    <type>hvm</type>
     <boot dev='hd'/>
   </os>
   <features>
