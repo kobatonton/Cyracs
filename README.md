@@ -14,6 +14,9 @@ config ディレクトリ内に記述された定義ファイルをもとにVM�
 git clone https://github.com/kobatonton/cyracs.git
 ```
 
+# Base images
+https://drive.google.com/drive/folders/154yw9yI0jlLkY19tfbTyydiMZ2E26knq?usp=sharing
+
 # Usage
 ## Create 
 定義ファイルに書かれた仮想ネットワークと仮想マシン軍を作成します。
