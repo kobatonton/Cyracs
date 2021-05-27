@@ -1,6 +1,0 @@
-<network>
-	<name>{{.Name}}</name>
-	<uuid>{{.Uuid}}</uuid>
-	<bridge name='vbr_{{.Name}}' stp='off' delay='0'/>
-	<domain name='{{.Name}}'/>
-</network>
