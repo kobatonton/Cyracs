@@ -1,0 +1,51 @@
+{
+    "id": 2,
+    "network": [
+        {
+            "uuid": "5e79186d-e36d-4318-87ac-181f4a9c2f2c",
+            "name": "dmz"
+        },
+        {
+            "uuid": "ce4bdd7c-b2a3-4002-8bd1-ce3a13035262",
+            "name": "internal"
+        },
+        {
+            "uuid": "213f8b19-87ce-427e-8710-3f0c1a26948c",
+            "name": "work"
+        }
+    ],
+    "vm": [
+        {
+            "uuid": "99ae33f6-fc85-4a72-b4be-48a4757f6fc8",
+            "hostname": "ubuntu20test",
+            "baseimage": "ubuntu20.qcow2",
+            "cpu": 4,
+            "memory": 4,
+            "disk": 100,
+            "interfaces": [
+                {
+                    "network": "dmz",
+                    "ip": "10.0.0.254",
+                    "prefix": "8",
+                    "gw": "",
+                    "dns": ""
+                },
+                {
+                    "network": "work",
+                    "ip": "192.168.0.254",
+                    "prefix": "24",
+                    "gw": "",
+                    "dns": ""
+                },
+                {
+                    "network": "internal",
+                    "ip": "172.16.0.254",
+                    "prefix": "16",
+                    "gw": "",
+                    "dns": ""
+                }
+            ],
+            "nettype": "netplan"
+        }
+    ]
+}

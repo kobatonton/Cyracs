@@ -1,0 +1,118 @@
+{
+    "id": 1,
+    "network": [
+        {
+            "uuid": "353b36f1-3b0f-4045-a9d0-35f4aa4cbdbd",
+            "name": "dmz"
+        },
+        {
+            "uuid": "213f8b19-87ce-427e-8710-3f0c1a26948c",
+            "name": "work"
+        },
+        {
+            "uuid": "ce4bdd7c-b2a3-4002-8bd1-ce3a13035262",
+            "name": "internal"
+        }
+    ],
+    "vm": [
+        {
+            "uuid": "7b37220e-76b4-4a2c-8424-190bdce05072",
+            "hostname": "firewall",
+            "baseimage": "ubuntu20.04",
+            "cpu": 1,
+            "memory": 8,
+            "disk": 500,
+            "interfaces": [
+                {
+                    "network": "dmz",
+                    "ip": "10.0.0.254",
+                    "mask": "255.0.0.0",
+                    "gw": "",
+                    "dns": ""
+                },
+                {
+                    "network": "internal",
+                    "ip": "172.16.0.254",
+                    "mask": "255.255.0.0",
+                    "gw": "",
+                    "dns": ""
+                },
+                {
+                    "network": "work",
+                    "ip": "192.168.0.254",
+                    "mask": "255.255.255.0",
+                    "gw": "",
+                    "dns": ""
+                }
+            ],
+            "nettype": "netplan",
+            "packages": [
+                "yum",
+                "httpd"
+            ]
+        },
+        {
+            "uuid": "808ed0e4-4c5b-4c37-bec5-ae967ff23a15",
+            "hostname": "external",
+            "baseimage": "centos7",
+            "cpu": 1,
+            "memory": 4,
+            "disk": 100,
+            "interfaces": [
+                {
+                    "network": "dmz",
+                    "ip": "10.0.0.1",
+                    "mask": "255.0.0.0",
+                    "gw": "",
+                    "dns": ""
+                }
+            ],
+            "nettype": "network-scripts",
+            "packages": [
+                "yum",
+                "httpd"
+            ]
+        },
+        {
+            "uuid": "c0458cda-8be3-4099-aca6-328c99616363",
+            "hostname": "internal",
+            "baseimage": "ubuntu18",
+            "cpu": 2,
+            "memory": 8,
+            "disk": 500,
+            "interfaces": [
+                {
+                    "network": "internal",
+                    "ip": "172.16.0.1",
+                    "mask": "255.255.0.0",
+                    "dgw": "",
+                    "dns": ""
+                    }
+            ],
+            "nettype": "netplan",
+            "packages": [
+                "dovecot",
+                "postfix",
+                "ssh"
+            ]
+        },
+        {
+            "uuid": "2bf99848-aca6-45c8-8c8a-44a59becae68",
+            "hostname": "worker",
+            "baseimage": "ubuntu20",
+            "cpu": 2,
+            "memory": 8,
+            "disk": 500,
+            "interfaces": [
+                {
+                    "network": "work",
+                    "ip": "192.168.0.1",
+                    "mask": "255.255.255.0",
+                    "dgw": "",
+                    "dns": ""
+                    }
+            ],
+            "nettype": "netplan"
+        }
+    ]
+}
