@@ -19,7 +19,7 @@ write_files:
           def:
             match:
               macaddress: {{defmac}}            wakeonlan: true
-            dhcp4: true{{range $i, $int := .Interfaces}}
+            dhcp4: true{{range $i, $_ := .Interfaces}}
           if{{$i}}:
             match:
               macaddress: {{mac $i}}            wakeonlan: true

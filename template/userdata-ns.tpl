@@ -9,7 +9,7 @@ chpasswd:
   list: |
     {{.Hostname}}:{{.Hostname}}
   expire: False
-write_files:{{range $i, $int := .Interfaces}}
+write_files:{{range $i, $_ := .Interfaces}}
   - path: /etc/sysconfig/network-scripts/ifcfg-if{{$i}}
     permissions: "0644"
     content: |
