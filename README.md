@@ -19,7 +19,7 @@ https://drive.google.com/drive/folders/154yw9yI0jlLkY19tfbTyydiMZ2E26knq?usp=sha
 
 # Usage
 ## Create 
-定義ファイルに書かれた仮想ネットワークと仮想マシン軍を作成します。
+定義ファイルに書かれた仮想ネットワークと仮想マシン群を作成します。
 
 ```
 go run main.go crate [filename]
@@ -42,7 +42,7 @@ start testvm successfully
 ```
 
 ## Destroy
-定義ファイルに書かれた仮想ネットワークと仮想マシン軍を削除します。
+定義ファイルに書かれた仮想ネットワークと仮想マシン群を削除します。
 
 削除する際、仮想ネットワークと仮想マシンの強制終了が行われます。
 ```
