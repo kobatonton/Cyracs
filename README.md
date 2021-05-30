@@ -5,11 +5,17 @@ config ディレクトリ内に記述された定義ファイルをもとにVM�
 
 ベースイメージは自身で作成することもできます。ただし、cloud-initが有効になっている必要があります。
 <br><br><br>
+
 現在対応しているOSは以下によってインターフェースが制御されているOSのみです。
 - netplan
 - network-scripts
 
 # Installation
+このツールを使用するにあたり、以下がインストールされている必要があります。
+- libvirt v6.0.0 more
+- Go v1.16 more
+
+
 ```
 git clone https://github.com/kobatonton/cyracs.git
 ```
