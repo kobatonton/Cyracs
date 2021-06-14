@@ -12,8 +12,8 @@ config ディレクトリ内に記述された定義ファイルをもとにVM�
 
 # Installation
 このツールを使用するにあたり、以下がインストールされている必要があります。
-- libvirt v6.0.0 more
-- Go v1.16 more
+- libvirt v6.0.0 以上
+- Go v1.16 以上
 
 
 ```
